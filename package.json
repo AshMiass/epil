@@ -1,0 +1,16 @@
+{
+  "name": "epilyarium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --servestatic --files 'css/*.css' 'index.html'",
+    "build:css": "tailwind build css/main.css -o css/index.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
+  }
+}
