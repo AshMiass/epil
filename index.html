@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <title>Эпиляриум: комфортное удаление волос</title>
   <link rel="stylesheet" href="css/tailwind.min.css" />
@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="js/alpine.min.js" defer></script>
+  <script type="text/javascript">var submitted=false;</script>
   <style>
     .snap {
       -ms-scroll-snap-type: x mandatory;
@@ -24,6 +25,8 @@
   </style>
 </head>
 <body class="text-gray-700 bg-white" style="font-family: 'Roboto', arial, sans-serif">
+  <iframe name="hidden_form_iframe" id="hidden_form_iframe" style="display:none;" 
+  onload="if(submitted) {window.location='accepted.html';}"></iframe>
     <nav class="container mx-auto px-6 py-2 md:flex justify-between items-center">
         <div class="md:w-1/4 px-8 py-6 md:py-0">
             <img src="./assets/epil_logo.png">
@@ -85,9 +88,9 @@
                     <div class="font-thin text-base">
                         Всего 5 мест! Акция для новых клиентов.
                     </div>
-                    <form class="my-4 container mx-auto">
-                          <input placeholder="Имя" class="w-full rounded-l-lg p-3 border-t border-b border-l text-gray-800 border-gray-200 bg-gray-300">
-                          <input placeholder="Телефон" class="w-full my-4 rounded-l-lg p-3 border-t border-b border-l text-gray-800 border-gray-200 bg-gray-300">
+                    <form class="my-4 container mx-auto" target="hidden_form_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScB-5v6vKzE4pZX-5NXM0Eak0YX3Cd2orrhhM63aVckMKeUCA/formResponse">
+                          <input placeholder="Имя" minlength="2" name="entry.1211871573" required class="w-full rounded-l-lg p-3 border-t border-b border-l text-gray-800 border-gray-200 bg-gray-300">
+                          <input placeholder="Телефон" minlength="9" name="entry.307610008" pattern="\d{9,10}" required maxlength="10" class="w-full my-4 rounded-l-lg p-3 border-t border-b border-l text-gray-800 border-gray-200 bg-gray-300">
                           <button class="w-full rounded-l-lg p-3 bg-gray-800 text-white" type="submit">Оставить заявку</button> 
                     </form>
                     <div class="text-sm">
@@ -297,10 +300,10 @@
               на <span class="font-bold">бесплатный</span> сеанс эпиляции классического бикини
             </div>
           </div>
-          <form class="md:flex justify-center items-center py-4 md:py-20 gap-4 px-8">
-            <input placeholder="Имя" class="p-4 border border-black rounded md:w-1/3 w-full my-4">
-            <input placeholder="Телефон" class="p-4 border border-black rounded md:w-1/3 w-full my-4">
-            <button class="p-4 rounded bg-gray-800 text-white w-full md:w-1/4 my-4">Отправить заявку</button>
+          <form class="md:flex justify-center items-center py-4 md:py-20 gap-4 px-8" target="hidden_form_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScB-5v6vKzE4pZX-5NXM0Eak0YX3Cd2orrhhM63aVckMKeUCA/formResponse">
+            <input placeholder="Имя" minlength="2" name="entry.1211871573" required class="p-4 border border-black rounded md:w-1/3 w-full my-4">
+            <input placeholder="Телефон" minlength="9" name="entry.307610008" pattern="\d{9,10}" class="p-4 border border-black rounded md:w-1/3 w-full my-4">
+            <button type="submit" class="p-4 rounded bg-gray-800 text-white w-full md:w-1/4 my-4">Отправить заявку</button>
           </form>
         </div>
     </section>
